@@ -1655,6 +1655,7 @@ header{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     right:auto}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
 </style>
+<style>.action-allowance{display:block;font-size:10px;line-height:1.4;margin-top:4px}#phaseText{display:inline-block}</style>
 </head>
     <body data-screen="home">
         <!-- Main menu -->
@@ -1672,10 +1673,10 @@ header{
                         <span class="mode-tooltip">Relaxed · 5 mountains, goals 2 / 3 / 2, free passes.</span>
                     </button>
                     <button class="menu-hit sign-second mode-choice" data-mode="standard" aria-label="Standard">
-                        <span class="mode-tooltip">Standard · 8 mountains, goals 3 / 5 / 3, −3 per pass.</span>
+                        <span class="mode-tooltip">Standard · 8 mountains, goals 3 / 5 / 3, 3 passes at −5.</span>
                     </button>
                     <button class="menu-hit sign-third mode-choice" data-mode="expert" aria-label="Expert">
-                        <span class="mode-tooltip">Expert · 12 mountains, goals 5 / 6 / 5, −3 per pass.</span>
+                        <span class="mode-tooltip">Expert · 12 mountains, goals 5 / 6 / 5, 1 pass at −8.</span>
                     </button>
                 </div>
             </div>
@@ -1704,7 +1705,7 @@ header{
                             </div>
                             <div id="progress" class="progress">
                             </div>
-                            <p id="phaseText">The land is open. Start with the essentials.</p>
+                            <p><span id="phaseText" class="badge">STANDARD</span></p>
                         </div>
                         <div class="panel objectives">
                             <p class="eyebrow">TOWN DUTIES</p>
@@ -1753,7 +1754,7 @@ header{
                             <div class="card-art" id="cardArt">
                             </div>
                             <div class="card-body">
-                                <span class="eyebrow" id="cardType">FOREST · FIELD CARD 01</span>
+                                <span class="eyebrow" id="cardType">FOREST</span>
                                 <h2 id="cardTitle">The quiet woods</h2>
                                 <p id="cardStory">
                                 </p>
@@ -1784,7 +1785,7 @@ header{
                             </button>
                         </div>
                         <button class="primary" id="confirm" disabled>Confirm & draw next →</button>
-                        <button class="skip" id="skip">Pass this card <span>−3 points</span>
+                        <button class="skip" id="skip">Pass this card <span>−5 points · 3 passes left</span>
                         </button>
                         <button class="give-up" id="giveUp">Give up</button>
                     </aside>
