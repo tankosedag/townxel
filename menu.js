@@ -23,7 +23,7 @@ function refreshButtons(){const tr=window.TownxelI18n?.language==='tr',en=config
  document.querySelectorAll('.mode-choice').forEach((button,i)=>setSprite(button,tr?local:en,rects[i]));}
 document.addEventListener('townxel-language-change',refreshButtons);
 $('reportBug').onclick=()=>{
- window.Townxel.modal(`<p class="eyebrow">REPORT A BUG</p><h2>Send a bug report</h2><form id="bugMailForm"><label class="bug-label">Subject<input id="bugTitle" required maxlength="120" placeholder="e.g. Piece does not rotate"></label><label class="bug-label">Description<textarea id="bugDetails" required rows="5" maxlength="5000" placeholder="What did you do, and what happened?"></textarea></label><p>Your email app will open with this report. Review it there and send it.</p><button id="sendBugReport" class="primary" type="submit">Send</button></form>`);
+ window.Townxel.modal(`<p class="eyebrow">REPORT A BUG</p><h2>Send a bug report</h2><form id="bugMailForm"><label class="bug-label">Subject<input id="bugTitle" required maxlength="120" placeholder="e.g. Piece does not rotate"></label><label class="bug-label">Description<textarea id="bugDetails" required rows="5" maxlength="5000" placeholder="What did you do and what happened?"></textarea></label><p>Your email app will open with this report. Review it there and send it.</p><button id="sendBugReport" class="primary" type="submit">Send</button></form>`);
  $('bugMailForm').onsubmit=e=>{e.preventDefault();const tr=window.TownxelI18n?.language==='tr';const subject='Townxel — '+$('bugTitle').value.trim();const description=$('bugDetails').value.trim();const screen={home:tr?'Ana sayfa':'Home',start:tr?'Zorluk menüsü':'Difficulty menu',game:tr?'Oyun':'Game'}[document.body.dataset.screen];const body=`${tr?'Açıklama':'Description'}:\r\n${description}\r\n\r\n${tr?'Ekran':'Screen'}: ${screen}`;
  const url='mailto:'+config.bugReportEmail+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);window.location.href=url;
  // Keep the report on screen: opening a mail app is not proof of delivery.
@@ -31,3 +31,22 @@ $('reportBug').onclick=()=>{
 };
 window.TownxelMenus={show,start};refreshButtons();show('home');
 })();
+
+/*
+15 GÖREVLİK HAVUZ
+1. Su kenarında evler — Suya komşu köy kareleri.
+2. Sulanan tarlalar — Suya komşu tarla kareleri.
+3. Su kenarında orman — Suya komşu orman kareleri.
+4. Yaşayan bir orman — En büyük kenardan bağlı ormandaki kareler.
+5. Orman evleri — Ormana komşu köy kareleri.
+6. Korunaklı tarlalar — Ormana komşu tarla kareleri.
+7. Dağ ormanı — Dağa komşu orman kareleri.
+8. Dağ evleri — Dağa komşu köy kareleri.
+9. Dağ suları — Dağa komşu su kareleri.
+10. Yol kenarında köyler — Sabit yola komşu köy kareleri.
+11. Yol kenarında tarlalar — Sabit yola komşu tarla kareleri.
+12. Yol kenarında orman — Sabit yola komşu orman kareleri.
+13. Sınır köyleri — Harita kenarındaki köy kareleri.
+14. Sınır tarlaları — Harita kenarındaki tarla kareleri.
+15. Sınır suları — Harita kenarındaki su kareleri.
+*/

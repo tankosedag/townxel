@@ -1656,6 +1656,7 @@ header{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
 </style>
 <style>.action-allowance{display:block;font-size:10px;line-height:1.4;margin-top:4px}#phaseText{display:inline-block}</style>
+<style>.bonus[hidden]{display:none!important}</style>
 </head>
     <body data-screen="home">
         <!-- Main menu -->
@@ -1670,13 +1671,13 @@ header{
                 </button>
                 <div id="modeButtons" hidden>
                     <button class="menu-hit sign-first mode-choice" data-mode="relaxed" aria-label="Relaxed">
-                        <span class="mode-tooltip">Relaxed · 5 mountains, goals 2 / 3 / 2, free passes.</span>
+                        <span class="mode-tooltip">5 mountains</span>
                     </button>
                     <button class="menu-hit sign-second mode-choice" data-mode="standard" aria-label="Standard">
-                        <span class="mode-tooltip">Standard · 8 mountains, goals 3 / 5 / 3, 3 passes at −5.</span>
+                        <span class="mode-tooltip">8 mountains</span>
                     </button>
                     <button class="menu-hit sign-third mode-choice" data-mode="expert" aria-label="Expert">
-                        <span class="mode-tooltip">Expert · 12 mountains, goals 5 / 6 / 5, 1 pass at −8.</span>
+                        <span class="mode-tooltip">12 mountains</span>
                     </button>
                 </div>
             </div>
@@ -1799,13 +1800,32 @@ header{
             <div id="dialogContent">
             </div>
         </dialog>
-        <script src="config.js">
+        <script src="config.js?v=20261021-2">
         </script>
-        <script src="i18n.js">
+        <script src="i18n.js?v=20261021-2">
         </script>
-        <script src="game.js">
+        <script src="game.js?v=20261021-2">
         </script>
-        <script src="menu.js">
+        <script src="menu.js?v=20261021-2">
         </script>
     </body>
 </html>
+
+<!--
+15 GÖREVLİK HAVUZ
+1. Su kenarında evler — Suya komşu köy kareleri.
+2. Sulanan tarlalar — Suya komşu tarla kareleri.
+3. Su kenarında orman — Suya komşu orman kareleri.
+4. Yaşayan bir orman — En büyük kenardan bağlı ormandaki kareler.
+5. Orman evleri — Ormana komşu köy kareleri.
+6. Korunaklı tarlalar — Ormana komşu tarla kareleri.
+7. Dağ ormanı — Dağa komşu orman kareleri.
+8. Dağ evleri — Dağa komşu köy kareleri.
+9. Dağ suları — Dağa komşu su kareleri.
+10. Yol kenarında köyler — Sabit yola komşu köy kareleri.
+11. Yol kenarında tarlalar — Sabit yola komşu tarla kareleri.
+12. Yol kenarında orman — Sabit yola komşu orman kareleri.
+13. Sınır köyleri — Harita kenarındaki köy kareleri.
+14. Sınır tarlaları — Harita kenarındaki tarla kareleri.
+15. Sınır suları — Harita kenarındaki su kareleri.
+-->
