@@ -1,5 +1,6 @@
 /* Change filenames here when you add your own images. Paths start at index.html. */
 window.TOWNXEL_CONFIG = {
+  specialCard: 'assets/spacial_mine_card.png',
   mainMenu: 'assets/main_page.png',
   startMenu: 'assets/start_page.png',
   bugIcon: 'assets/bug.png',
@@ -7,6 +8,7 @@ window.TOWNXEL_CONFIG = {
   menuSprites: { en: 'assets/menu-buttons-en.png', tr: 'assets/menu-buttons-tr.png' },
   logo: 'assets/townxel.png',
   tiles: {
+    mine: 'assets/mine.png',
     forest: 'assets/forest.png',
     farm: 'assets/farm.png',
     village: 'assets/village.png',

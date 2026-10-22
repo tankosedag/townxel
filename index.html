@@ -1657,6 +1657,21 @@ header{
 </style>
 <style>.action-allowance{display:block;font-size:10px;line-height:1.4;margin-top:4px}#phaseText{display:inline-block}</style>
 <style>.bonus[hidden]{display:none!important}</style>
+<style>
+/* Black text on the special Mine card. */
+.discovery[data-special="mine"] .card-body,
+.discovery[data-special="mine"] .card-body * { color:#000 !important; }
+</style>
+<style>
+/* Expert shows geometry only: green fits, red does not fit. */
+.cell.expert-placement:after {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:#6fa27266; box-shadow:inset 0 0 0 2px #406e49;
+}
+.cell.expert-placement.invalid:after {
+  background:#c95f5866; box-shadow:inset 0 0 0 2px #a94939;
+}
+</style>
 </head>
     <body data-screen="home">
         <!-- Main menu -->
