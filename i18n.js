@@ -57,7 +57,7 @@ Object.assign(translations,{
   "Controls": "Mekanikler",
   "Preview your terrain piece before confirming it. Rotate it with R or mirror it with F to fit the empty spaces on the map. On a phone, tap a square to see the placement and use the on-screen buttons. Before confirming, you can click another square to move the piece or use Undo (S) to clear the pending placement. When you are satisfied, confirm to finish the round and draw the next card. Confirmed placements cannot be moved or undone.": "Arazi parçanı onaylamadan önce harita üzerindeki yerleşimini görebilirsin. Boşluklara sığdırmak için R ile döndür, F ile aynala. Telefonda yerleşimi görmek için bir kareye dokun ve ekrandaki düğmeleri kullan. Onaylamadan önce başka bir kareye tıklayarak parçayı taşıyabilir veya Geri al (S) ile bekleyen yerleştirmeyi kaldırabilirsin. “Tamam, şimdi oldu” dediğinde yerleşimi onaylayıp sonraki karta geç. Onaylanmış yerleştirmeler taşınamaz veya geri alınamaz.",
   "Breaking a card condition costs points but never blocks placement. Occupied squares and positions outside the map cannot be used. In Expert mode, green shows that a piece fits and red shows that it cannot be placed. Penalties do not change the preview to orange.": "Kart koşulunu ihlal etmek puan kaybettirir ama yerleştirmeyi engellemez. Dolu karelere veya harita dışına yerleştirme yapılamaz. Uzman modunda yeşil, parçanın sığdığını; kırmızı, yerleştirilemediğini gösterir. Ceza koşulları önizlemeyi turuncuya çevirmez.",
-  "You can pass an unwanted card. The number of passes and their point cost depend on the mode. If you want to end the game, use Give up and confirm your choice. Your final score includes only confirmed placements.": "İstemediğin bir kartı pas geçebilirsin. Pas hakkının sayısı ve puan kesintisi moda göre değişir. Oyunu bitirmek istersen Pes et düğmesini kullanıp seçimini onayla. Son puanına yalnızca onaylanmış yerleştirmeler dâhil edilir.",
+  "You can pass an unwanted card. The number of passes and their point cost depend on the mode. If you want to end the game, use Give up and confirm your choice. Giving up sets your final score to 0. The result card shows the round and stage you reached and your remaining action allowances.": "İstemediğin bir kartı pas geçebilirsin. Pas hakkının sayısı ve puan kesintisi moda göre değişir. Oyunu bitirmek istersen Pes et düğmesini kullanıp seçimini onayla. Pes edersen son puanın 0 olur. Karnede ulaştığın tur ve aşama ile kalan kullanım hakların gösterilir.",
   "Mode rules": "Mod kuralları",
   "Relax: passes are free and unlimited. Rotation, flip and undo are unlimited.": "Rahat: Pas ücretsiz ve sınırsızdır. Döndürme, aynalama ve geri alma sınırsızdır.",
   "Standard: 3 passes, each costing 5 points. Rotation and flip can each be used on 5 rounds. Undo can be used 6 times in total.": "Standart: Her biri 5 puan götüren 3 pas hakkın vardır. Döndürme ve aynalama ayrı ayrı 5 tur, geri alma toplam 6 kez kullanılabilir.",
@@ -65,6 +65,16 @@ Object.assign(translations,{
   "Rotation and flip allowances count rounds, not clicks. Once you use an action in a round, you can repeat that action freely for the rest of that round. In Standard and Expert, every undo uses one allowance. Undo does not restore rotation or flip allowances. The counters beside the controls show your remaining allowances.": "Döndürme ve aynalama hakları tıklama değil, tur üzerinden azalır. Bir turda kullandığın işlemi o tur istediğin kadar tekrarlayabilirsin. Standart ve Uzman modlarında her geri alma bir hak harcar. Geri alma, döndürme veya aynalama hakkını geri vermez. Kontrollerin yanındaki sayaçlardan kalan haklarını takip edebilirsin.",
   "Only squares that share an edge count as neighbors. Diagonal contact gives no adjacency bonus and does not connect terrain groups.": "Yalnızca ortak kenarı bulunan kareler komşu sayılır. Çapraz temas komşuluk bonusu kazandırmaz ve arazi gruplarını birbirine bağlamaz.",
   "There are eastereggs in the game.": "Oyunda eastereggler mevcuttur."
+});
+Object.assign(translations,{
+'Surrender details':'Pes etme bilgileri',
+'Round at surrender':'Pes edilen tur',
+'Stage at surrender':'Pes edilen aşama',
+'Rotations remaining':'Kalan döndürme hakkı',
+'Flips remaining':'Kalan aynalama hakkı',
+'Undos remaining':'Kalan geri alma hakkı',
+'Passes remaining':'Kalan pas hakkı',
+'Giving up ends this game and sets your final score to 0.':'Pes edersen oyun sona erer ve son puanın 0 olur.'
 });
 function translate(source,language){if(language==='en')return reverse.get(source)||source;const s=source.trim();let out=translations[s];if(out===undefined){
  let m;
