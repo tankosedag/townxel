@@ -1685,6 +1685,22 @@ body:not([data-screen="home"]) .github-link { display: none; }
     body[data-screen="home"] #reportBug { left: 70px; }
 }
 </style>
+<style>
+.tutorial-active #language{z-index:102}
+#tutorialShade,#tutorialOutline{position:fixed;inset:0;z-index:100}
+#tutorialShade{background:rgba(14,17,20,.43);backdrop-filter:grayscale(1);-webkit-backdrop-filter:grayscale(1)}
+#tutorialOutline{inset:auto;pointer-events:none;outline:2px solid #e7bb63;outline-offset:1px;border-radius:3px}
+#tutorialPanel{position:fixed;z-index:101;bottom:max(12px,env(safe-area-inset-bottom));right:clamp(10px,3vw,36px);width:min(400px,calc(100vw - 20px));padding:14px 16px;color:#f7e9ce;background:#272019;border:2px solid #c59853;box-shadow:0 6px 24px #0009;border-radius:8px}
+#tutorialPanel h2{color:inherit;font-size:20px;margin:4px 0 6px}
+#tutorialPanel p{font-size:14px;line-height:1.35;margin:0 0 10px}
+#tutorialCount{color:#e5bf7c;font-size:12px}
+.tutorial-actions{display:flex;justify-content:space-between;gap:8px}
+.tutorial-actions button{min-height:38px;padding:6px 11px;border:1px solid #c59853;background:#362b21;color:#f7e9ce;border-radius:4px}
+#tutorialNext{background:#e2bd79;color:#21180f;font-weight:bold}
+.tutorial-actions button:focus-visible,.tutorial-place [data-x="1"][data-y="1"]:focus-visible{outline:2px solid white;outline-offset:2px}
+.tutorial-active #gameScreen{padding-bottom:var(--tutorial-panel-height,180px)}
+.tutorial-place [data-x="1"][data-y="1"]{outline:3px solid #fff2b3;outline-offset:-4px;z-index:1}
+</style>
 </head>
     <body data-screen="home">
         <!-- Main menu -->
@@ -1841,11 +1857,22 @@ body:not([data-screen="home"]) .github-link { display: none; }
         </script>
         <script src="i18n.js?v=20261021-2">
         </script>
-        <script src="game.js?v=20261021-2">
+        <script src="game.js?v=tutorial-1">
         </script>
         <script src="menu.js?v=20261021-2">
         </script>
-    </body>
+    <div id="tutorialShade" hidden aria-hidden="true"></div>
+<div id="tutorialOutline" hidden aria-hidden="true"></div>
+<aside id="tutorialPanel" aria-labelledby="tutorialTitle" hidden>
+    <div id="tutorialCount"></div>
+    <div aria-live="polite"><h2 id="tutorialTitle"></h2><p id="tutorialText"></p></div>
+    <div class="tutorial-actions">
+        <button id="tutorialExit" type="button">Exit guide</button>
+        <button id="tutorialNext" type="button">Next →</button>
+    </div>
+</aside>
+<script src="tutorial.js?v=2"></script>
+</body>
 </html>
 
 <!--
